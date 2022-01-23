@@ -21,16 +21,4 @@ after_success:
         - docker push tomaszklawa/complex-nginx
         - docker push tomaszklawa/complex-sever
         - docker push tomaszklawa/complex-worker
-        
-deploy:
-    provider: elasticbeanstalk
-    region: 'eu-central-1'
-    app: 'complex'
-    env: 'Complex-env-1'
-    bucket_name: 'elasticbeanstalk-eu-central-1-548309142200'
-    bucket_path: 'copmlex'
-    on:
-        branch: master
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: $AWS_SECRET_KEY        
 
