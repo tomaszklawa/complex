@@ -23,12 +23,12 @@ services:
                 environment:
                         - REDIS_HOST=$REDIS_HOST
                         - REDIS_PORT=$REDIS_PORT
-                nginx:
-                        image: "tomaszklawa/complex-nginx"
-                        mem_limit: 128m
-                        hostname: nginx
-                        ports:
-                                - "80:80"
+        nginx:
+                image: "tomaszklawa/complex-nginx"
+                mem_limit: 128m
+                hostname: nginx
+                ports:
+                        - "80:80"
 
 
 
