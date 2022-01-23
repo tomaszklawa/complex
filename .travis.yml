@@ -11,7 +11,7 @@ script:
 after_success:
         - docker build -t tomaszklawa/complex-client ./client
         - docker build -t tomaszklawa/complex-nginx ./nginx
-        - docker build -t tomaszklawa/complex-sever ./server
+        - docker build -t tomaszklawa/complex-server ./server
         - docker build -t tomaszklawa/complex-worker ./worker
 
 #docker login
@@ -19,7 +19,7 @@ after_success:
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
         - docker push tomaszklawa/complex-client
         - docker push tomaszklawa/complex-nginx
-        - docker push tomaszklawa/complex-sever
+        - docker push tomaszklawa/complex-server
         - docker push tomaszklawa/complex-worker
         
 deploy:
